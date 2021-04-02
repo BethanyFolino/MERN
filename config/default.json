@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://proxy:proxy@devconnector.bpli0.mongodb.net/myFirstDatabase?retryWrites=true"
+  "mongoURI": "mongodb+srv://proxy:proxy@devconnector.bpli0.mongodb.net/myFirstDatabase?retryWrites=true",
+  "jwtSecret": "mysecrettoken"
 }
