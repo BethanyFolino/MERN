@@ -45,7 +45,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? "" : profile.social.youtube,
       instagram: loading || !profile.social ? "" : profile.social.instagram
     });
-  }, [loading, getCurrentProfile]);
+  }, [loading, getCurrentProfile, profile]);
 
   const {
     company,
@@ -92,7 +92,7 @@ const EditProfile = ({
             <option value="Intern">Intern</option>
             <option value="Other">Other</option>
           </select>
-          <small class="form-text">
+          <small className="form-text">
             Give us an idea of where you are at in your career
           </small>
         </div>

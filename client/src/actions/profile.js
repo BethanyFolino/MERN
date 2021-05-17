@@ -8,7 +8,8 @@ import {
   UPDATE_PROFILE,
   CLEAR_PROFILE,
   ACCOUNT_DELETED,
-  GET_REPOS
+  GET_REPOS,
+  NO_REPOS
 } from "./types";
 
 //Get current user's profile
@@ -75,8 +76,7 @@ export const getGithubRepos = username => async dispatch => {
     });
   } catch (err) {
     dispatch({
-      type: PROFILE_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status }
+      type: NO_REPOS
     });
   }
 };
@@ -84,13 +84,7 @@ export const getGithubRepos = username => async dispatch => {
 // Create or update profile
 export const createProfile = (formData, history, edit = false) => async dispatch => {
   try {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    }
-
-    const res = await axios.post("/api/profile", formData, config);
+    const res = await axios.post("/api/profile", formData);
 
     dispatch({
       type: GET_PROFILE,

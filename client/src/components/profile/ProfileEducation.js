@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import formatDate from "../../utils/formatDate";
 
 const ProfileEducation = ({
-  experience: { school, degree, fieldofstudy, current, to, from, description }
+  education: { school, degree, fieldofstudy, current, to, from, description }
 }) => <div>
     <h3 className="text-dark">{school}</h3>
     <p>
-    {formatDate(edu.from)} - {edu.to ? formatDate(edu.to) : 'Now'}
+    {formatDate(from)} - {to ? formatDate(to) : 'Now'}
     </p>
     <p>
       <strong>Degree: </strong> {degree}
@@ -22,7 +22,7 @@ const ProfileEducation = ({
 
 
 ProfileEducation.propTypes = {
-  education: PropTypes.array.isRequired
+  education: PropTypes.object.isRequired
 };
 
 export default ProfileEducation;

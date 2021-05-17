@@ -7,10 +7,13 @@ const ProfileExperience = ({
 }) => <div>
     <h3 className="text-dark">{company}</h3>
     <p>
-    {formatDate(exp.from)} - {exp.to ? formatDate(exp.to) : 'Now'}
+    {formatDate(from)} - {to ? formatDate(to) : 'Now'}
     </p>
     <p>
       <strong>Position: </strong> {title}
+    </p>
+    <p>
+      <strong>Location: </strong> {location}
     </p>
     <p>
       <strong>Description: </strong> {description}
@@ -19,7 +22,7 @@ const ProfileExperience = ({
 
 
 ProfileExperience.propTypes = {
-  experience: PropTypes.array.isRequired
+  experience: PropTypes.object.isRequired
 };
 
 export default ProfileExperience;

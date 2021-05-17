@@ -68,7 +68,7 @@ const CreateProfile = ({ createProfile, history }) => {
             <option value="Intern">Intern</option>
             <option value="Other">Other</option>
           </select>
-          <small class="form-text">
+          <small className="form-text">
             Give us an idea of where you are at in your career
           </small>
         </div>
