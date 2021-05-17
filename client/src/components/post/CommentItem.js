@@ -20,7 +20,7 @@ const CommentItem = ({
     </div>
     <div>
       <p class="my-1">{text}</p>
-      <p class="post-date">Posted on {formatDate(date)} - {date ? formatDate(date) : null}</p>
+      <p class="post-date">Posted on {formatDate(date)}</p>
       {!auth.loading && user === auth.user._id && (
         <button onClick={e => deleteComment(postId, _id)} type="button" className="btn btn-danger">
           <i className="fas fa-times"></i>

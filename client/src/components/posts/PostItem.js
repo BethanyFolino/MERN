@@ -22,9 +22,7 @@ const PostItem = ({
     </div>
     <div>
     <p class="my-1">{text}</p>
-    <p class="post-date">
-        Posted on {formatDate(date)} - {date ? formatDate(date) : null}
-    </p>
+    <p class="post-date">Posted on {formatDate(date)}</p>
 
     {showActions && <Fragment>
       <button onClick={e => addLike(_id)} type="button" class="btn btn-light">
