@@ -1,6 +1,5 @@
 {
   "mongoURI": "mongodb+srv://proxy:proxy@devconnector.bpli0.mongodb.net/myFirstDatabase?retryWrites=true",
   "jwtSecret": "mysecrettoken",
-  "githubClientId": "50e5680144652ed0c0bc",
-  "githubSecret": "2fc7d8ec1ce096ee884a54044362628e56270fac"
+  "githubToken": "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"
 }
