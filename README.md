@@ -1,4 +1,4 @@
-# MERN
+# Stars Align
 This project is based on the DevConnector from Brad Traversy's Udemy course "MERN Stack Front to Back: Full Stack React, Redux &amp; Node.js"
 
 I changed the purpose of this project from being a social media app for software developers to connect and collaborate to a social media app for people in the entertainment industry to get together, collaborate, and get work.
