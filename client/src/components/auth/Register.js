@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
+import {BsStarFill} from "react-icons/bs"
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         <Fragment>
           <h1 className="large text-primary">Sign Up</h1>
           <p className="lead">
-              <i className="fas fa-user" /> Create Your Account
+              <BsStarFill /> Create Your Account
           </p>
           <form className="form" onSubmit={e => onSubmit(e)}>
               <div className="form-group">

@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect } from "react"
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 import { getPosts } from "../../actions/post";
+import {BsStarFill} from "react-icons/bs";
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
@@ -17,7 +18,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Fragment>
       <h1 className="large text-primary">Posts</h1>
       <p className="lead">
-        <i className="fas fa-user"></i> Welcome to the community
+        <BsStarFill /> Welcome to the community
       </p>
       <PostForm />
       <div className="posts">

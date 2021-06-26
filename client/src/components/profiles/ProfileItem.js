@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import {FaRegCheckSquare} from "react-icons/fa";
 
 const ProfileItem = ({
   profile: {
@@ -24,7 +25,7 @@ const ProfileItem = ({
     <ul>
       {skills.slice(0,4).map((skill, index) => (
         <li key={index} className="text-primary">
-          <i className="fas fa-check"></i> {skill}
+          <FaRegCheckSquare /> {skill}
         </li>
       ))}
     </ul>

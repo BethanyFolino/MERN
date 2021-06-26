@@ -1,8 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
+import {BsStarFill} from "react-icons/bs";
 
 const Login = ({ login, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ const Login = ({ login, isAuthenticated }) => {
         <Fragment>
           <h1 className="large text-primary">Sign In</h1>
           <p className="lead">
-              <i className="fas fa-user" /> Sign Into Your Account
+              <BsStarFill /> Sign Into Your Account
           </p>
           <form className="form" onSubmit={e => onSubmit(e)}>
               

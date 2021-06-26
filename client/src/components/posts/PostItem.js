@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import formatDate from "../../utils/formatDate";
 import { connect } from "react-redux";
 import { addLike, removeLike, deletePost } from "../../actions/post";
+import {FaThumbsUp} from "react-icons/fa";
+import {FaThumbsDown} from "react-icons/fa";
+import {FaTimesCircle} from "react-icons/fa";
 
 const PostItem = ({
   addLike,
@@ -26,11 +29,11 @@ const PostItem = ({
 
     {showActions && <Fragment>
       <button onClick={e => addLike(_id)} type="button" className="btn btn-light">
-        <i className="fas fa-thumbs-up" />{" "}
+        <FaThumbsUp />{" "}
         <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
     </button>
     <button onClick={e => removeLike(_id)} type="button" className="btn btn-light">
-        <i className="fas fa-thumbs-down"></i>
+        <FaThumbsDown />
     </button>
     <Link to={`/post/${_id}`} className="btn btn-primary">
         Discussion{" "}
@@ -40,7 +43,7 @@ const PostItem = ({
     </Link>
     {!auth.loading && user === auth.user._id && (
         <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger">
-        <i className="fas fa-times" />
+        <FaTimesCircle />
         </button>
     )}
     </Fragment>}

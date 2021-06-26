@@ -1,5 +1,4 @@
 {
   "mongoURI": "mongodb+srv://proxy:proxy@devconnector.bpli0.mongodb.net/myFirstDatabase?retryWrites=true",
-  "jwtSecret": "mysecrettoken",
-  "githubToken": "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"
+  "jwtSecret": "mysecrettoken"
 }

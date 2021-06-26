@@ -3,6 +3,11 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+import {FaTwitter} from "react-icons/fa";
+import {FaFacebook} from "react-icons/fa";
+import {FaYoutube} from "react-icons/fa";
+import {FaLinkedIn} from "react-icons/fa";
+import {FaInstagram} from "react-icons/fa";
 
 const EditProfile = ({ 
   profile: { profile, loading }, 
@@ -16,7 +21,6 @@ const EditProfile = ({
     location: "",
     status: "",
     skills: "",
-    githubusername: "",
     bio: "",
     twitter: "",
     facebook: "",
@@ -36,8 +40,6 @@ const EditProfile = ({
       location: loading || !profile.location ? "" : profile.location,
       status: loading || !profile.status ? "" : profile.status,
       skills: loading || !profile.skills ? "" : profile.skills.join(","),
-      githubusername:
-        loading || !profile.githubusername ? "" : profile.githubusername,
       bio: loading || !profile.bio ? "" : profile.bio,
       twitter: loading || !profile.social ? "" : profile.social.twitter,
       facebook: loading || !profile.social ? "" : profile.social.facebook,
@@ -53,7 +55,6 @@ const EditProfile = ({
     profile.location, 
     profile.status, 
     profile.skills, 
-    profile.githubusername,
     profile.bio,
     profile.social, 
     profile.social.twitter, 
@@ -69,7 +70,6 @@ const EditProfile = ({
     location,
     status,
     skills,
-    githubusername,
     bio,
     twitter,
     facebook,
@@ -98,18 +98,24 @@ const EditProfile = ({
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
-            <option value="0">* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
+            <option value="0">* Select Main Occupation</option>
+            <option value="Actor">Actor</option>
+            <option value="Artist">Artist</option>
+            <option value="Choreographer">Choreographer</option>
+            <option value="Comedian">Comedian</option>
+            <option value="Composer">Composer</option>
+            <option value="Dancer">Dancer</option>
+            <option value="Director">Director</option>
+            <option value="Instructor">Instructor</option>
+            <option value="Musician">Musician</option>
+            <option value="Photographer">Photographer</option>
+            <option value="Producer">Producer</option>
+            <option value="Student">Student</option>
+            <option value="Writer">Writer</option>
             <option value="Other">Other</option>
           </select>
           <small className="form-text">
-            Give us an idea of where you are at in your career
+            Tell us about your career!
           </small>
         </div>
         <div className="form-group">
@@ -133,21 +139,10 @@ const EditProfile = ({
         <div className="form-group">
           <input type="text" placeholder="* Skills" name="skills" value={skills} onChange={e => onChange(e)} />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. acting, directing movies, singing jazz, etc. - feel free to be as specific as you wish)
           </small>
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Github Username"
-            name="githubusername"
-            value={githubusername}
-            onChange={e => onChange(e)}
-          />
-          <small className="form-text">
-            If you want your latest repos and a Github link, include your username
-          </small>
-        </div>
+        
         <div className="form-group">
           <textarea placeholder="A short bio of yourself" name="bio" value={bio} onChange={e => onChange(e)} />
           <small className="form-text">Tell us a little about yourself</small>
@@ -162,27 +157,27 @@ const EditProfile = ({
 
         {displaySocialInputs && <Fragment>
         <div className="form-group social-input">
-          <i className="fab fa-twitter fa-2x"></i>
+          <FaTwitter />
           <input type="text" placeholder="Twitter URL" name="twitter" value={twitter} onChange={e => onChange(e)} />
         </div>
 
         <div className="form-group social-input">
-          <i className="fab fa-facebook fa-2x"></i>
+          <FaFacebook />
           <input type="text" placeholder="Facebook URL" name="facebook" value={facebook} onChange={e => onChange(e)} />
         </div>
 
         <div className="form-group social-input">
-          <i className="fab fa-youtube fa-2x"></i>
+          <FaYoutube />
           <input type="text" placeholder="YouTube URL" name="youtube" value={youtube} onChange={e => onChange(e)} />
         </div>
 
         <div className="form-group social-input">
-          <i className="fab fa-linkedin fa-2x"></i>
+          <FaLinkedIn />
           <input type="text" placeholder="Linkedin URL" name="linkedin" value={linkedin} onChange={e => onChange(e)} />
         </div>
 
         <div className="form-group social-input">
-          <i className="fab fa-instagram fa-2x"></i>
+          <FaInstagram />
           <input type="text" placeholder="Instagram URL" name="instagram" value={instagram} onChange={e => onChange(e)} />
         </div>
         </Fragment>}

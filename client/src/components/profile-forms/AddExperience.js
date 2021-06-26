@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addExperience } from "../../actions/profile";
+import {MdLocalActivity} from "react-icons/md"
 
 const AddExperience = ({ addExperience, history }) => {
     const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const AddExperience = ({ addExperience, history }) => {
     <Fragment>
       <h1 className="large text-primary">Add An Experience</h1>
       <p className="lead">
-        <i className="fas fa-code-branch"></i> Add any developer/programming
+        <MdLocalActivity />Add any entertainment
         positions that you have had in the past
       </p>
       <small>* = required field</small>

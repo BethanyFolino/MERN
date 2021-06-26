@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import {FaRegCheckSquare} from "react-icons/fa";
 
 const ProfileAbout = ({ 
   profile: {
@@ -19,7 +20,7 @@ const ProfileAbout = ({
   <div className="skills">
     {skills.map((skill, index) => (
       <div key={index} className="p-1">
-       <i className="fas fa-check"></i> {skill}
+       <FaRegCheckSquare /> {skill}
       </div>
     ))}
   </div>

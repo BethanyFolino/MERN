@@ -1,5 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {FcGlobe} from "react-icons/fc";
+import {FaTwitter} from "react-icons/fa";
+import {FaFacebook} from "react-icons/fa";
+import {FaLinkedIn} from "react-icons/fa";
+import {FaYoutube} from "react-icons/fa";
+import {FaInstagram} from "react-icons/fa";
 
 const ProfileTop = ({ profile: {
   status,
@@ -21,32 +27,32 @@ const ProfileTop = ({ profile: {
           <div className="icons my-1">
             {website ? (
               <a href={website} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-globe fa-2x"></i>
+                <FcGlobe />
               </a>
             ) : null}
             {social && social.twitter ? (
             <a href={social.twitter} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter fa-2x"></i>
+              <FaTwitter />
             </a>
             ) : null}
             {social && social.facebook ? (
             <a href={social.facebook} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook fa-2x"></i>
+              <FaFacebook />
             </a>
             ) : null}
             {social && social.linkedin ? (
             <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin fa-2x"></i>
+              <FaLinkedIn />
             </a>
              ) : null}
             {social && social.youtube ? (
             <a href={social.youtube} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-youtube fa-2x"></i>
+              <FaYoutube />
             </a>
              ) : null}
             {social && social.instagram ? (
             <a href={social.instagram} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram fa-2x"></i>
+              <FaInstagram />
             </a>
             ) : null}
           </div>

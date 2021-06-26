@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
+import {BsStarFill} from "react-icons/bs";
 
 export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
       <ul>
         <li>
-          <Link to="/profiles">Developers</Link>
+          <Link to="/profiles">Entertainment Personnel</Link>
           <Link to="/posts">Posts</Link>
         </li>
         <li>
@@ -29,7 +30,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const guestLinks = (
       <ul>
           <li>
-            <Link to="/profiles">Developers</Link>
+            <Link to="/profiles">Entertainment Personnel</Link>
           </li>
           <li>
             <Link to="/register">Register</Link>
@@ -44,7 +45,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
        <nav className="navbar bg-dark">
          <h1>
            <Link to="/">
-             <i className="fas fa-code" /> DevConnector
+             <BsStarFill /> Stars Align - Entertainment Industry Careers
            </Link>
          </h1>
          { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
