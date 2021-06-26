@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { addLike, removeLike, deletePost } from "../../actions/post";
 import {FaThumbsUp} from "react-icons/fa";
 import {FaThumbsDown} from "react-icons/fa";
-import {FaTimesCircle} from "react-icons/fa";
+import {FaTimes} from "react-icons/fa";
 
 const PostItem = ({
   addLike,
@@ -43,7 +43,7 @@ const PostItem = ({
     </Link>
     {!auth.loading && user === auth.user._id && (
         <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger">
-        <FaTimesCircle />
+        <FaTimes />
         </button>
     )}
     </Fragment>}

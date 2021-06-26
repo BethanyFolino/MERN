@@ -6,7 +6,7 @@ import { createProfile, getCurrentProfile } from '../../actions/profile';
 import {FaTwitter} from "react-icons/fa";
 import {FaFacebook} from "react-icons/fa";
 import {FaYoutube} from "react-icons/fa";
-import {FaLinkedIn} from "react-icons/fa";
+import {FaLinkedin} from "react-icons/fa";
 import {FaInstagram} from "react-icons/fa";
 
 const initialState = {
@@ -206,7 +206,7 @@ const ProfileForm = ({
             </div>
 
             <div className="form-group social-input">
-              <FaLinkedIn />
+              <FaLinkedin />
               <input
                 type="text"
                 placeholder="Linkedin URL"

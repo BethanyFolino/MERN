@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {FcGlobe} from "react-icons/fc";
 import {FaTwitter} from "react-icons/fa";
 import {FaFacebook} from "react-icons/fa";
-import {FaLinkedIn} from "react-icons/fa";
+import {FaLinkedin} from "react-icons/fa";
 import {FaYoutube} from "react-icons/fa";
 import {FaInstagram} from "react-icons/fa";
 
@@ -42,7 +42,7 @@ const ProfileTop = ({ profile: {
             ) : null}
             {social && social.linkedin ? (
             <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedIn />
+              <FaLinkedin />
             </a>
              ) : null}
             {social && social.youtube ? (

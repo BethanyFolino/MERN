@@ -9,12 +9,18 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
       <ul>
         <li>
-          <Link to="/profiles">Entertainment Personnel</Link>
-          <Link to="/posts">Posts</Link>
+          <Link to="/profiles">
+            <BsStarFill />{" "}
+              Entertainment Personnel
+          </Link>
+          <Link to="/posts">
+            <BsStarFill />{" "}
+              Posts
+          </Link>
         </li>
         <li>
           <Link to="/dashboard">
-            <i className="fas fa-user" />{" "}
+            <BsStarFill />{" "}
             <span className="hide-sm">Dashboard</span>
           </Link>
         </li>

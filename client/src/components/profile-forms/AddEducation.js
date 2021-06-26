@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addEducation } from "../../actions/profile";
-import {IoSchool} from "react-icons/io";
+import {IoSchool} from "react-icons/io5";
 
 const AddEducation = ({ addEducation, history }) => {
     const [formData, setFormData] = useState({

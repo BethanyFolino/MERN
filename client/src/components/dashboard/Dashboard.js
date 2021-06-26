@@ -6,6 +6,7 @@ import DashboardActions from "./DashboardActions";
 import Experience from "./Experience";
 import Education from "./Education";
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
+import {BsStarFill} from "react-icons/bs";
 import {FaTimes} from "react-icons/fa";
 
 const Dashboard = ({ 
@@ -22,7 +23,7 @@ const Dashboard = ({
     <Fragment>
       <h1 className="large text-primary">Dashboard</h1>
       <p className="lead">
-       <i className="fas fa-user"></i> Welcome {user && user.name}
+       <BsStarFill /> Welcome {user && user.name}
       </p>
       {profile !== null ? (
         <Fragment>
